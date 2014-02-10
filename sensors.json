@@ -1,0 +1,38 @@
+{
+	"DHT22":{
+		"id":1,
+		"value":"NONE",
+		"type":"temperature"
+	},
+	"living":{
+		"id":2,
+		"value":"NONE",
+		"type":"temperature"
+	},
+	"basement":{
+		"id":3,
+		"value":"NONE",
+		"type":"temperature"
+	},
+	
+	"front":{
+		"id":4,
+		"value":"NONE",
+		"type":"door"
+	},
+	"back":{
+		"id":5,
+		"value":"NONE",
+		"type":"door"
+	},
+	"geiger":{
+		"id":6,
+		"value":"NONE",
+		"type":"geiger"
+	},
+	"mq4":{
+		"id":7,
+		"value":"NONE",
+		"type":"gas"
+	}
+}

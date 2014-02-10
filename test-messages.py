@@ -13,8 +13,8 @@ timestamp = int(time.time())
 
 broker = '127.0.0.1'
 port = 1883
-element = 'home'
-areas = ['front', 'back', 'kitchen', 'basement', 'living']
+element = 'sensors'
+areas = ['front4', 'back5', 'basement3', 'living2', 'DHT221', 'mq47', 'geiger6']
 entrances = ['door', 'window']
 states = ['true', 'false']
 
@@ -23,9 +23,15 @@ print 'Messages are published on topic %s/#... -> CTRL + C to shutdown' \
 
 while True:
     area = random.choice(areas)
-    if (area in ['basement', 'living']):
+    if (area in ['basement3', 'living2', 'DHT221']):
         topic = element + '/' + area + '/temp'
         message = random.randrange(0, 30, 1)
+    elif area == 'mq47':
+        topic = element + '/' + area + '/ppm'
+        message = random.randrange(0, 1000, 1)
+    elif area == "geiger6":
+        topic = element + '/' + area + '/bq'
+        message = random.randrange(0,100,1)
     else:
         topic = element + '/' + area + '/' + random.choice(entrances)
         message = random.choice(states)
